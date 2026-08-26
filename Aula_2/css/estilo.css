@@ -1,0 +1,15 @@
+ body{
+            background:rgb(245, 231, 245) ;
+        }
+        h1{
+            color: black; font-size: 80px;
+        }
+
+        .cinza{color:gray}
+        .vermelho{color:red}
+
+        #teste {color: rgb(3, 0, 0); background: yellow;}
+        .teste1{
+            color:purple; font-size:60px; padding-left:100px ;
+        }
+        a:hover{color:rgb(0, 170, 255) ;}
