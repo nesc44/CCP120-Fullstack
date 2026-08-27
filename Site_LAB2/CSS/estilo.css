@@ -1,0 +1,9 @@
+body{
+    .background{ background-image: url('../Imagens/background2.jpg') ; background-repeat: no-repeat; background-size: cover; background-position: center; min-height: 100vh;}
+}
+h1{
+    color: black; font-size: 60px; font-family: 'Times New Roman', Times, serif; text-align: center;
+}
+h2{
+    color: black; font-size: 40px; font-family: 'Times New Roman', Times, serif; text-align: center;
+}
