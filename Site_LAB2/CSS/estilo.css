@@ -1,9 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Caacupe+One&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body, button, input{
+    font: 400 16px "Roboto", sans-serif;
+}
+/*plano de fundo principal*/
 body{
-    .background{ background-image: url('../Imagens/background2.jpg') ; background-repeat: no-repeat; background-size: cover; background-position: center; min-height: 100vh;}
+    background-color: #16161a; color:rgb(255, 237, 214); min-height: 100vh; margin: 0;
 }
-h1{
-    color: black; font-size: 60px; font-family: 'Times New Roman', Times, serif; text-align: center;
+/*titulos e subtitulos geral*/
+.estilo_titulos{
+    color: white; font-size: 60px; font-family: 'Roboto', sans-serif; text-align: center;
 }
-h2{
-    color: black; font-size: 40px; font-family: 'Times New Roman', Times, serif; text-align: center;
+.estilo_subtitulos{
+    color: white; font-size: 40px; font-family: 'Roboto', sans-serif; text-align: center;
+}
+/*formatacao do hover geral*/
+a{
+    color: #a42eff; text-decoration: none;
+}
+a:hover {
+    color: white; text-decoration: none;
+}
+/*menu header*/
+.menu-navegacao{
+    display: flex; justify-content: center; gap: 50px; padding: 30px 0;
+}
+.menu-navegacao a {
+    color: white; font-size: 18px; text-decoration: none; transition: color 0.3s ease;
+}
+.menu-navegacao a:hover{
+    color: #a42eff; text-decoration: none; font-weight: bold; transition: 0.3s ease;
+}
+.menu-navegacao a.ativo{
+    color: white; font-weight: bold; border-bottom: 2px solid #a42eff; padding-bottom: 5px;
+}
+/* formtacao da apresentacao */
+.apresentacao{
+    display: flex; align-items: center; justify-content: space-between; padding: 60px 10%; max-width: 1200px; margin: 0 auto;
+}
+.apresentacao-texto{
+    flex: 1;
+}
+.titulo_destaque{
+    color: white; font-size: 75px; font-weight: bold; margin: 0; line-height: 1.1;
+}
+#titulo_funcao{
+    color:#a42eff; font-size:20px ; font-weight: normal ; margin-top: 15px;
+}
+.apresentacao-imagem{
+    flex: 1; display: flex; justify-content: flex-end;
+}
+.apresentacao-imagem img{
+    width: 100%; max-width: 400px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+/* Sobre mim */
+.sobre-mim{
+    padding: 60px 10%; max-width: 1200px; margin: 0 auto;
+}
+.sobre-mim-texto{
+    max-width: 800px; margin: 0 auto 40px auto; text-align: center;
+}
+.sobre-mim-texto p {
+    font-size: 20px; line-height: 1.5;
+}
+/* tabela meus hobbys*/
+.tabela-hobbys{
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;
+}
+.conteudo-hobbys{
+    background-color: black; border-radius: 15px; padding: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); transition: transform 0.3 ease;
+}
+.conteudo-hobbys:hover{
+    transform: translateY(-10px);
+}
+.conteudo-hobbys h3{
+    color: #a42eff; font-size: 22px; margin-top: 0; margin-bottom: 15px;
+}
+.conteudo-hobbys img{
+    width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;
+}
+.conteudo-hobbys p{
+    color: white; font-size: 15px; line-height: 1.5; margin: 0;
 }

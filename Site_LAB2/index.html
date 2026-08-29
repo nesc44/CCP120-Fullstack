@@ -6,34 +6,64 @@
         <link rel="stylesheet" href="CSS/estilo.css">
     
     </head>
-    <body class="background">
-        <p><a href=index.html>Home</a> <a href=project.html>Projetos</a></p>
-        <h1>Breno Bastos Rocha</h1>
-        <h2>Quem eu sou?</h2>
-        <img src="eu.jpg" alt="Foto Breno" height="300" width="300">
-        <p>Sou o Breno, tenho 25 anos, moro em <a href=https://pt.wikipedia.org/wiki/Diadema>Diadema</a>, trabalho como carpinteiro na <a href=https://www.toledobrasil.com> Toledo do Brasil</a> e estou no primeiro semestre de Ciencia da Computacao na <a href=https://portal.fei.edu.br>FEI</a>. 
-        </p>
-        <p>Desde pequeno sou aficionado pela area de tecnologia, e estou muito feliz com a oportunidade de aprender e criar. Nesse site, pretendo testar meu conhecimento mostrando uma pequena parte do que eu sou.</p>
-        
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58454.010474728006!2d-46.654716427782745!3d-23.698275581458145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce445de3962263%3A0x9ca2ba904b9421db!2sDiadema%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1787253079491!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <body>
+        <!-- Menu home e projetos agrupados no header -->
+        <header>
+            <nav class="menu-navegacao">
+                <a href="index.html" class="ativo"> Home</a>
+                <a href="project.html"> Projetos</a>
+            </nav>
+        </header>
+        <!--Apresentacao-->
+        <main>
+            <section class="apresentacao">
+                <div class="apresentacao-texto"> 
+                    <h1 class="titulo_destaque">Breno Bastos Rocha</h1>
+                    <h2 id="titulo_funcao">Estudante de Ciencia da Computacao</h2>
+                </div>
+                <div class="apresentacao-imagem">
+                    <img src="/CCP120-Fullstack/Site_LAB2/Imagens/eu.jpg" alt="Foto Breno">
+                </div>
+                <!--Sessao sobre mim-->
+            </section class="sobre-mim">
+                <h2 class="estilo_subtitulos">Quem eu sou?</h2>        
+                <div class="sobre-mim-texto">
+                    <p>Sou o Breno, tenho 25 anos, moro em <a href=https://pt.wikipedia.org/wiki/Diadema>Diadema</a>, trabalho como carpinteiro na <a href=https://www.toledobrasil.com> Toledo do Brasil</a> e estou no primeiro semestre de Ciencia da Computacao na <a href=https://portal.fei.edu.br>FEI</a>. 
+        Desde pequeno sou aficionado pela area de tecnologia, e estou muito feliz com a oportunidade de aprender e criar. Nesse site, pretendo testar e aplicar meus conhecimentos mostrando uma pequena parte do que eu sou.</p>
+                </div>
+                <!--Sessao meus hobbys-->
+                <section class="sobre-mim">
+                    <h2 class="estilo_subtitulos">Meus Hobbys</h2>
+                    <div class="tabela-hobbys">
+                        <!--Hobby 1-->
+                        <div class="conteudo-hobbys">
+                            <h3>Assistir filmes</h3>
+                            <img src="/CCP120-Fullstack/Site_LAB2/Imagens/poster_2001.jpg" alt="Poster filme 2001" height="200" width="200">
+                            <p>Gosto muito de ver filmes desde pequeno, vou ao cinema pelo menos uma vez por mes. Sou fa de sci-fi e meu filme favorito e 2001 uma odisseia no espaco</p>
+                        </div>
+                        <!--Hobby 2-->
+                        <div class="conteudo-hobbys">
+                            <h3>Jogar videogame</h3>
+                            <img src="/CCP120-Fullstack/Site_LAB2/Imagens/thewitcher3.jpg" alt="Poster filme 2001" height="200" width="200">
+                            <p>Outro gosto relacionado a midia. Sempre procuro jogar algo no meu tempo livre. Meu jogo favorito e The Witcher 3, ja zerei o jogo base + dlcs 3 vezes e pretendo zerar novamente nas ferias apos a atualizacao e nova dlc.</p>
+                        </div>
+                        <!--Hobby 3-->
+                        <div class="conteudo-hobbys">
+                            <h3>Colecionar camisas do Corinthians</h3>
+                            <img src="/CCP120-Fullstack/Site_LAB2/Imagens/camisa_corinthians.jpg" alt="Poster filme 2001" height="200" width="200">
+                            <p>Sou corinthiano doente desde que me conheco por gente. Ja faz 20 anos da minha primeira vez no estadio, e desde entao, sempre acompanho o Corinthians onde quer que seja. Comecei uma colecao 7 anos atras, tenho mais de 30 camisas. A camisa mais antiga e de 1990, primeiro titulo brasileiro do Timao.</p>
+                        </div>
+                        <!--Hobby 4-->
+                        <div class="conteudo-hobbys">
+                            <h3>Fazer projetos de marcenaria</h3>
+                            <img src="/CCP120-Fullstack/Site_LAB2/Imagens/mesa.jpg" alt="Poster filme 2001" height="200" width="200">
+                            <p>Por ser carpinteiro de profissao, peguei gosto por fazer projetos exclusivamentes PESSOAIS. nao bato um prego pra ninguem que nao seja eu ou minha firma. A parte de madeira de todo meu setup foi planejada e montadada por mim.</p>
+                        </div>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.9754123087337!2d-46.59321938786415!3d-23.7125720670784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce43f775bdcf31%3A0xb5fb7a39203a706f!2sToledo%20do%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1787253132889!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.648694546823!2d-46.581978187864316!3d-23.724236267509628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4158ef9c7c05%3A0x776b798985695f52!2sFEI%20Campus%20S%C3%A3o%20Bernardo%20do%20Campo!5e0!3m2!1spt-BR!2sbr!4v1787253157147!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        
-        <h2>Meus hobbys</h2>
-        <ul>
-            <li>Assistir filmes</li>
-            <img src="poster_2001.jpg" alt="Poster filme 2001" height="200" width="200">
-            <li>Jogar videogame</li>
-             <img src="thewitcher3.jpg" alt="Imagem the witcher 3 height="200" width="200">
-            <li>Colecionar camisas do Corinthians</li>
-            <img src="camisa_corinthians.jpg" alt="Camisa Corinthians height="200" width="200">
-            <li>Construir projetos de marcenaria</li>
-            <img src="mesa.jpg" alt="Setup em madeira" height="200"  width="200">
-
-        </ul>
-
+                </section>
+    </main>
         
     
 
