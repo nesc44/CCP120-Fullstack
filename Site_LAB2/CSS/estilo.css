@@ -81,3 +81,31 @@ a:hover {
 .conteudo-hobbys p{
     color: white; font-size: 15px; line-height: 1.5; margin: 0;
 }
+/* Aba Projetos*/
+.sessao-projetos{
+    padding: 60px 10%; max-width: 1000px; margin: 0 auto;
+}
+.tabela-projetos{
+    width: 100%; border-collapse: collapse; background-color: black; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); margin-top: 30px;
+}
+.tabela-projetos th {
+    background-color: rgb(41, 41, 41); color: white; text-align: left; padding: 18px 20px; font-size: 18px;
+}
+.tabela-projetos td {
+    padding: 15px 20px; border-bottom: 1px solid #a42eff; color: rgb(255, 240, 211);
+}
+.tabela-projetos tbody tr:last-child td{
+    border-bottom: none;
+}
+.tabela-projetos tbody tr{
+    transition: background-color 0.3s ease;
+}
+.tabela-projetos tbody tr:hover{
+    background-color: #d194ff;
+}
+.tabela-projetos td a{
+    color: #a42eff; font-weight: bold;
+}
+.tabela-projetos td a:hover{
+    color: white;
+}
