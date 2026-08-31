@@ -101,7 +101,7 @@ a:hover {
     transition: background-color 0.3s ease;
 }
 .tabela-projetos tbody tr:hover{
-    background-color: #d194ff;
+    background-color: #b996d5;
 }
 .tabela-projetos td a{
     color: #a42eff; font-weight: bold;
