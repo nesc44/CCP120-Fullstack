@@ -22,13 +22,22 @@ h2{
 }
 
 .tabela{
-    border: 5px, dashed, red; margin-left: 40%;
+    border: 5px, dashed, red; margin: 0 auto; border-collapse: collapse;
+}
+.tabela th{
+    border: 1px solid red; padding: 5px; text-align: center; color: red;
+}
+.tabela td{
+    border: 1px solid red; padding: 5px; text-align: center;
 }
 .introducao p{
     font-size: 20pt; font-family: sans-serif; color: indigo; text-align: center;
 }
 .consulta{
-    background-color: yellow; display: block; margin-left: 50%; position: relative;
+    background-color: yellow; width: 600px; margin: 30px auto; padding: 5px; text-align: left;
+}
+.consulta a{
+    text-align: center; color: darkred; font-weight: bold; margin-left: 100px;
 }
 .esp{
     display: flex; justify-content: center; align-items: center; gap: 40px;
