@@ -1,0 +1,294 @@
+.bg{
+    background-color: #FAF7F2;
+}
+.fonte_geral{
+    color: #2B2A28;
+}
+.fonte_sec{
+    color: #5B564C;
+}
+.menu {
+    display: flex; 
+    justify-content: space-between; /* Empurra o nome para a esquerda e o <nav> para a direita */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 30px 10%; /* Adiciona um espaço em cima/baixo e afasta os itens das bordas da tela */
+}
+
+.logo {
+    font-size: 18px; /* Ajusta o tamanho da fonte */
+    color: #2B2A28; /* Cor escura do texto */
+}
+
+.links {
+    display: flex; /* Coloca os links um ao lado do outro */
+    gap: 30px; /* Cria um espaço uniforme entre os links */
+}
+
+.links p {
+    cursor: pointer; /* Deixa a setinha do mouse com formato de mão ao passar por cima */
+}
+
+
+
+
+
+/* Container principal da apresentação */
+.aprese {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna (um embaixo do outro) */
+    align-items: center; /* Centraliza tudo horizontalmente */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Imagem de perfil redonda */
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Essa propriedade deixa a imagem em formato de círculo */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Ajustes dos títulos */
+.aprese h1 {
+    font-size: 40px;
+    color: #2B2A28;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.aprese_fonte {
+    color: #D96846; /* Um laranja um pouco mais suave, como no design original */
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Limite de largura para o texto não esticar */
+.descricao {
+    max-width: 600px; /* Controla o tamanho máximo da linha de texto */
+    line-height: 1.6; /* Aumenta o espaço entre as linhas para ficar mais legível */
+    margin-bottom: 40px;
+}
+
+/* Container dos botões */
+.botoes {
+    display: flex;
+    gap: 20px; /* Cria um espaço entre os botões */
+}
+
+/* Estilo base compartilhado pelos dois botões */
+.btn {
+    padding: 12px 24px;
+    border-radius: 30px; /* Deixa as bordas arredondadas como uma pílula */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Botão da esquerda (verde com texto branco) */
+.btn-primario {
+    background-color: #3B6A4B;
+    color: white;
+}
+
+/* Botão da direita (transparente com borda verde) */
+.btn-secundario {
+    background-color: transparent;
+    border: 2px solid #3B6A4B;
+    color: #3B6A4B;
+}
+
+
+
+
+
+/* Container da seção sobre */
+.sobre {
+    background-color: #FFFFFF;
+    display: flex; /* Coloca as duas divs filhas lado a lado */
+    justify-content: center; /* Centraliza o conteúdo na tela */
+    gap: 80px; /* Cria um espaço grande entre a coluna "Sobre" e "Habilidades" */
+    padding: 80px 10%; /* Adiciona respiro em cima/baixo e afasta das bordas */
+}
+
+/* Configuração para as colunas não esticarem demais */
+.sobre-mim-coluna, .habilidades-coluna {
+    flex: 1; /* Faz as duas colunas dividirem o espaço igualmente */
+    max-width: 500px; /* Limita a largura máxima para manter a leitura agradável */
+}
+
+.sobre h2 {
+    color: #2B2A28;
+    margin-bottom: 20px;
+}
+
+.sobre-mim-coluna p {
+    line-height: 1.6; /* Melhora o espaçamento das linhas de texto */
+}
+
+/* Container das tags */
+.tags-habilidades {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as tags pulem para a linha de baixo se não couberem */
+    gap: 15px; /* Espaçamento entre cada tag */
+}
+
+/* Estilo individual de cada pílula/tag */
+.tags-habilidades span {
+    background-color: #EFECE6; /* Fundo cinza claro */
+    color: #5B564C;
+    padding: 8px 18px;
+    border-radius: 20px; /* Arredonda as bordas */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+
+
+/* Container principal de Projetos */
+.projetos {
+    padding: 80px 10%;
+    text-align: center; /* Centraliza o título e subtítulo */
+}
+
+.projetos-header {
+    margin-bottom: 50px;
+}
+
+.projetos-header h2 {
+    color: #2B2A28;
+    margin-bottom: 10px;
+}
+
+/* Coloca os cartões lado a lado */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espaço entre os dois cartões */
+    flex-wrap: wrap; /* Se a tela for pequena, joga o cartão para baixo */
+}
+
+/* Visual do Cartão branco */
+.card {
+    background-color: #FFFFFF;
+    border-radius: 20px; /* Bordas arredondadas do cartão */
+    width: 100%;
+    max-width: 480px; /* Impede que o cartão fique gigante */
+    text-align: left; /* O texto dentro do cartão fica alinhado à esquerda */
+    overflow: hidden; /* Corta as pontas da imagem para respeitar a borda arredondada */
+}
+
+/* Ajuste da imagem para caber certinho no topo do cartão */
+.card img {
+    width: 100%; /* Ocupa toda a largura do cartão */
+    height: auto;
+    display: block;
+}
+
+/* Área de texto e tags dentro do cartão */
+.card-conteudo {
+    padding: 30px; /* Respiro interno do cartão */
+}
+
+.card-conteudo h3 {
+    color: #2B2A28;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card-conteudo p {
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Tags de tecnologia (React, JS, etc) */
+.tags-projeto {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags-projeto span {
+    background-color: #F7EAE3; /* Fundo rosado claro */
+    color: #D96846; /* Texto laranja escuro */
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Fundo escuro e centralização de todo o conteúdo do rodapé */
+.rodape {
+    background-color: #2B2A28;
+    padding: 80px 20px 40px 20px; /* Mais espaço no topo, menos em baixo */
+    display: flex;
+    justify-content: center; /* Mantém o bloco de conteúdo no centro do ecrã */
+}
+
+/* Limita a largura para o texto não esticar demasiado em ecrãs grandes */
+.rodape-conteudo {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens verticalmente na coluna */
+    text-align: center;
+}
+
+.rodape h2 {
+    color: #FFFFFF;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.rodape-subtitulo {
+    color: #C9BDA9;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+/* Organiza a lista de contactos */
+.contactos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre o email, github e linkedin */
+    margin-bottom: 60px; /* Distância para a linha de copyright */
+}
+
+/* Alinha o ícone e o texto lado a lado em cada linha */
+.contacto-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Espaço entre o ícone e o texto */
+}
+
+.contacto-item p {
+    color: #EFECE6; /* Texto claro para leitura no fundo escuro */
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Tamanho padrão para os ícones */
+.icone-rodape {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Texto pequeno de direitos reservados */
+.copyright {
+    color: #8C867B; /* Cor mais subtil que os restantes textos */
+    font-size: 12px;
+    margin: 0;
+}
