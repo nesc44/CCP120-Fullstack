@@ -1,0 +1,6 @@
+.bg{
+    background-color: rgb(69, 68, 68);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
