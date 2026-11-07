@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação (0 a 99)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Adivinhação</h1>
+        <p>Tente adivinhar o número secreto de 0 a 99:</p>
+
+        <div class="input-group">
+            <input type="number" id="campoNumero" min="0" max="99" placeholder="0 a 99">
+            <button id="btnTestar">Testar</button>
+        </div>
+
+        <div id="resposta">Digite um número para começar!</div>
+
+        <div id="historico-secao">
+            <h3>Histórico de números testados:</h3>
+            <ul id="historico"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
