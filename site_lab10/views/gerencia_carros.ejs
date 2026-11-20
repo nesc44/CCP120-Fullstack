@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gerencia de Carros</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/CSS/estilo.css">
+    </head>
+    <body>
+        <header>
+            <nav class="menu-navegacao">
+                <a href="/Home.html">Home</a>
+                <a href="/">Projetos</a>
+            </nav>
+        </header>
+        <main class="container-carros">
+            <h1 class="estilo_titulos">Gerencia de Carros</h1>
+
+            <div class="area-acoes-carros">
+                <a href="/carros" class="botao-secundario">Ver Listagem de Carros</a>
+                <a href="/carros/login" class="botao-secundario">Login</a>
+                <a href="/carros/cadastro" class="botao-secundario">Cadastrar Usuario</a>
+            </div>
+
+            <!-- Formulario para Cadastrar Novo Carro (CREATE) -->
+            <section class="caixa-form caixa-post">
+                <h2>Cadastrar Novo Carro</h2>
+                <form action="/carros/cadastrar" method="post" class="formulario">
+                    <label for="marca">Marca:</label>
+                    <input type="text" id="marca" name="marca" required>
+
+                    <label for="modelo">Modelo:</label>
+                    <input type="text" id="modelo" name="modelo" required>
+
+                    <label for="ano">Ano:</label>
+                    <input type="number" id="ano" name="ano" required>
+
+                    <label for="qtde_disponivel">Quantidade disponivel:</label>
+                    <input type="number" id="qtde_disponivel" name="qtde_disponivel" min="0" required>
+
+                    <button type="submit" class="botao-form">Cadastrar Carro</button>
+                </form>
+            </section>
+
+            <!-- Lista de Carros para Vender, Atualizar e Remover (READ, UPDATE, DELETE) -->
+            <h2 class="estilo_subtitulos">Carros Cadastrados</h2>
+
+            <section class="lista-gerencia">
+                <% if (carros.length === 0) { %>
+                    <p class="sem-posts">Nenhum carro cadastrado no banco de dados ainda.</p>
+                <% } else { %>
+                    <% for (let i = 0; i < carros.length; i++) { %>
+                        <article class="card-gerencia">
+                            <div class="cabecalho-card-carro">
+                                <h3><%= carros[i].marca %> <%= carros[i].modelo %> (<%= carros[i].ano %>)</h3>
+                                <% if (carros[i].qtde_disponivel <= 0) { %>
+                                    <span class="aviso-esgotado">Esgotado</span>
+                                <% } else { %>
+                                    <span class="aviso-disponivel">Estoque: <%= carros[i].qtde_disponivel %></span>
+                                <% } %>
+                            </div>
+
+                            <!-- Atualizar Carro (UPDATE) -->
+                            <form action="/carros/atualizar" method="post" class="form-atualizar-carro">
+                                <input type="hidden" name="id" value="<%= carros[i]._id %>">
+
+                                <div class="campo-inline">
+                                    <label>Marca:</label>
+                                    <input type="text" name="marca" value="<%= carros[i].marca %>" required>
+                                </div>
+
+                                <div class="campo-inline">
+                                    <label>Modelo:</label>
+                                    <input type="text" name="modelo" value="<%= carros[i].modelo %>" required>
+                                </div>
+
+                                <div class="campo-inline">
+                                    <label>Ano:</label>
+                                    <input type="number" name="ano" value="<%= carros[i].ano %>" required>
+                                </div>
+
+                                <div class="campo-inline">
+                                    <label>Qtde:</label>
+                                    <input type="number" name="qtde_disponivel" value="<%= carros[i].qtde_disponivel %>" min="0" required>
+                                </div>
+
+                                <button type="submit" class="botao-form">Atualizar</button>
+                            </form>
+
+                            <!-- Botoes de Vender (UPDATE -1) e Remover (DELETE) -->
+                            <div class="acoes-card-carro">
+                                <form action="/carros/vender" method="post">
+                                    <input type="hidden" name="id" value="<%= carros[i]._id %>">
+                                    <% if (carros[i].qtde_disponivel <= 0) { %>
+                                        <button type="submit" class="botao-esgotado" disabled>Esgotado</button>
+                                    <% } else { %>
+                                        <button type="submit" class="botao-vender">Vender Carro</button>
+                                    <% } %>
+                                </form>
+
+                                <form action="/carros/remover" method="post">
+                                    <input type="hidden" name="id" value="<%= carros[i]._id %>">
+                                    <button type="submit" class="botao-remover">Remover Carro</button>
+                                </form>
+                            </div>
+                        </article>
+                    <% } %>
+                <% } %>
+            </section>
+        </main>
+    </body>
+</html>

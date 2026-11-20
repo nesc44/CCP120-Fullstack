@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/CSS/estilo.css">
+    </head>
+    <body>
+        <header>
+            <nav class="menu-navegacao">
+                <a href="/Home.html">Home</a>
+                <a href="/">Projetos</a>
+            </nav>
+        </header>
+        <main class="container-blog">
+            <h1 class="estilo_titulos">Meu Blog</h1>
+
+            <div class="area-botao-post">
+                <a href="/cadastrar_post" class="botao-form">Criar Post</a>
+            </div>
+
+            <section class="lista-posts">
+                <% if (posts.length === 0) { %>
+                    <p class="sem-posts">Nenhum post cadastrado ainda. Clique em "Criar Post" para adicionar o primeiro!</p>
+                <% } else { %>
+                    <% for (let i = 0; i < posts.length; i++) { %>
+                        <article class="card-post">
+                            <h2><%= posts[i].titulo %></h2>
+                            <p class="post-resumo"><%= posts[i].resumo %></p>
+                            <p class="post-conteudo"><%= posts[i].conteudo %></p>
+                        </article>
+                    <% } %>
+                <% } %>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro de Usuario - Carros</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/CSS/estilo.css">
+    </head>
+    <body>
+        <header>
+            <nav class="menu-navegacao">
+                <a href="/Home.html">Home</a>
+                <a href="/">Projetos</a>
+                <a href="/carros" class="ativo">Carros</a>
+            </nav>
+        </header>
+        <main class="container-form">
+            <section class="caixa-form">
+                <h1>Cadastro de Usuario</h1>
+                <form action="/carros/cadastro" method="post" class="formulario">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="login">Login:</label>
+                    <input type="text" id="login" name="login" required>
+
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+
+                    <button type="submit" class="botao-form">Cadastrar</button>
+                </form>
+                <p class="link-troca">Ja tem conta? <a href="/carros/login">Fazer login</a></p>
+                <p class="link-troca"><a href="/carros">Voltar para Carros</a></p>
+            </section>
+        </main>
+    </body>
+</html>

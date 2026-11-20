@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carros Disponiveis</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/CSS/estilo.css">
+    </head>
+    <body>
+        <header>
+            <nav class="menu-navegacao">
+                <a href="/Home.html">Home</a>
+                <a href="/">Projetos</a>
+            </nav>
+        </header>
+        <main class="container-carros">
+            <h1 class="estilo_titulos">Carros Disponiveis</h1>
+
+            <div class="area-acoes-carros">
+                <a href="/carros/gerencia" class="botao-form">Gerenciar Carros</a>
+                <a href="/carros/login" class="botao-secundario">Login</a>
+                <a href="/carros/cadastro" class="botao-secundario">Cadastrar Usuario</a>
+            </div>
+
+            <section class="grid-carros">
+                <% if (carros.length === 0) { %>
+                    <p class="sem-posts">Nenhum carro cadastrado ainda. Acesse "Gerenciar Carros" para cadastrar o primeiro!</p>
+                <% } else { %>
+                    <% for (let i = 0; i < carros.length; i++) { %>
+                        <article class="card-carro">
+                            <h2><%= carros[i].marca %> <%= carros[i].modelo %></h2>
+                            <p><strong>Ano:</strong> <%= carros[i].ano %></p>
+                            <% if (carros[i].qtde_disponivel <= 0) { %>
+                                <p class="aviso-esgotado">Esgotado</p>
+                            <% } else { %>
+                                <p class="aviso-disponivel">Disponivel: <%= carros[i].qtde_disponivel %> unidade(s)</p>
+                            <% } %>
+                        </article>
+                    <% } %>
+                <% } %>
+            </section>
+        </main>
+    </body>
+</html>
