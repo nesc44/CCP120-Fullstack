@@ -1,0 +1,128 @@
+
+:root {
+
+  --cor-fundo: #f4f6f9;
+  --cor-superficie: #ffffff;
+  --cor-texto-primario: #1e293b;
+  --cor-texto-secundario: #64748b;
+  --cor-borda-suave: #e2e8f0;
+
+
+  --cor-primaria: #2563eb;
+  --cor-primaria-hover: #1d4ed8;
+  --cor-primaria-clara: #dbeafe;
+
+
+  --canvas-azul: #0000ff;
+  --canvas-vermelho: #ff0000;
+  --canvas-ciano: #00ffff;
+  --canvas-amarelo: #ffff00;
+  --canvas-verde: #2e7d32;
+  --canvas-cinza: #808080;
+  --canvas-preto: #000000;
+  --canvas-branco: #ffffff;
+
+  --raio-borda: 12px;
+  --sombra-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-primario);
+  min-height: 100vh;
+  line-height: 1.6;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.canvas-card {
+  background-color: var(--cor-superficie);
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-card);
+  border: 1px solid var(--cor-borda-suave);
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.canvas-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px dashed var(--cor-borda-suave);
+}
+
+
+#meuCanvas {
+  width: 300px;
+  height: 300px;
+  display: block;
+  background-color: var(--canvas-branco);
+  border: 1px solid var(--canvas-preto);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--cor-borda-suave);
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto-secundario);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--cor-primaria-clara);
+  color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+}
+
+.btn-ativo {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  border-color: var(--cor-primaria);
+}
+
+.btn-ativo:hover {
+  background-color: var(--cor-primaria-hover);
+  color: #ffffff;
+}
