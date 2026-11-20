@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Status</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/CSS/estilo.css">
+    </head>
+    <body>
+        <header>
+            <nav class="menu-navegacao">
+                <a href="/Home.html">Home</a>
+                <a href="/">Projetos</a>
+            </nav>
+        </header>
+        <main class="container-form">
+            <section class="caixa-form">
+                <h1 class="<%= sucesso ? 'status-sucesso' : 'status-erro' %>"><%= titulo %></h1>
+                <p class="mensagem-status"><%= mensagem %></p>
+                <div class="botoes-resposta">
+                    <a href="/login" class="botao-form">Ir para Login</a>
+                    <a href="/cadastra" class="link-secundario">Voltar para Cadastro</a>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
